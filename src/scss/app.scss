@@ -1,0 +1,18 @@
+@import 'compass';
+@import 'compass/reset';
+@import 'compass/css3/user-interface';
+@import "appColors";
+@import "appFonts";
+@import "appDefaults";
+@import "appSpinner";
+
+body {
+  @include user-select(none);
+  display: flex;
+  color: $text-color;
+  background-color:$application-background-color;
+  font-family: $default-font-family;
+  font-size: $default-font-size;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

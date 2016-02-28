@@ -1,0 +1,11 @@
+#splash {
+  @include display-flex;
+  @include flex(1 1 auto);
+  @include justify-content(center);
+  @include align-items(center);
+  height: 100%;
+
+  & .fa-spinner {
+    font-size: 72px;
+  }
+}

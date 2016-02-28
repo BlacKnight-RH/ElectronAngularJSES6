@@ -1,0 +1,13 @@
+# Specifies intentionally untracked files to ignore when using Git
+# http://git-scm.com/docs/gitignore
+
+# JetBrains
+.idea
+
+.sass-cache
+node_modules
+src/jspm_packages
+src/css/app.css
+build
+publish
+
