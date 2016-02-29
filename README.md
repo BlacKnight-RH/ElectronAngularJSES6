@@ -115,8 +115,11 @@ gulp run-dev
 ```
 
 The above commands:
+
 1. Install all app dependencies (node_modules and jspm_packages).
+
 2. Runs the default gulp script that cleans all develop build folders, lints all ES6 code, runs compass, copies all development files except source JavaScript files, and creates a bundle file of all JavaScript.
+
 3. Starts Electron App in the develop publish folder.
 
 ## Gulp Tasks
