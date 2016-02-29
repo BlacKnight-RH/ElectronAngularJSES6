@@ -13,16 +13,10 @@ $step-size-heading: 0.33333;
 
 h1 {
   @include heading-size(6);
-  display: block;
-   margin: 0.67em 0;
-  font-weight: bold;
 }
 
 h2 {
   @include heading-size(5);
-  display: block;
-  margin: 0.83em 0;
-  font-weight: bold;
 }
 
 h3 {
@@ -39,6 +33,12 @@ h5 {
 
 h6 {
   @include heading-size(1);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  display: block;
+  margin: 1em 0 0.5em;
+  font-weight: bold;
 }
 
 p {

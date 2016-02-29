@@ -14,15 +14,15 @@ Going forward, I want to use ES6 for my Electron App Development and Node.js Ser
 Originally, I went down the TypeScript route but kept running into issues around incomplete, unavailable, or outdated d.ts files.  Additionally I found a 15% development tax (overhead) when writing TypeScript apps when compared to ES5 or ES6 without much payback over ES6.
 
 #### Goals
-1.  Write code using ES6
+1.  Write ES6 JavaScript
 2.  ES6 checked by linter
-3.  Write styles using SASS/SCSS
+3.  Author styles using SASS/SCSS
 4.  Blazing fast application start up time
 5.  AngularJS 1.x (this app is 1.4.8)
-6.  Cross-platform application building
+6.  Cross-platform application building and deployment
 7.  Great client debugging experience during development
-8.  Author clean ES6 with very little to no framework goo code
-9.  Be productive while working
+8.  Author clean ES6 with very little or no framework goo code
+9.  Be productive while coding
 10. Testing (coming soon)
 
 This demo/starter meets my goals.
@@ -34,9 +34,10 @@ I wrote this demo/starter to prove out all my scenarios for developing and build
 2. JavaScript is ES6
 3. ES6 linted using ESLint
 4. Uses gulp for its build system
-5. Built using gulp-jspm which creates a single .js file from: app .js files, vendor .js files, and the system .js files.
+5. Built using gulp-jspm which creates a single pre-compiled .js file from: app .js files, vendor .js files, and the system .js files.
 6. Loads incredibly fast at runtime, especially when a production build is made, which minifies the .js.  I originally had a spinner that showed during loading, but removed it because the app loads so fast.
 7. Uses SASS/SCSS and Compass for easy and fun app styling.
+8. Three developer work flows or builds (dev, preCompileDevelop, preCompileProduction).
 
 #### Helpful Links
 - Learn about SystemJS plugins: https://github.com/systemjs/systemjs#plugins
@@ -52,6 +53,8 @@ I wrote this demo/starter to prove out all my scenarios for developing and build
 - Learn about Electron Packager: https://github.com/electron-userland/electron-packager
 
 - Learn about Gulp: http://gulpjs.com/
+
+- This post was very helpful in understanding Electron, Angular, and ES6: https://www.xplatform.rocks/2015/05/04/writing-an-electron-atom-shell-app-using-angular-and-es6/
 
 ## Prerequisites
 Before you can run this code locally on your system, you'll need to load the following software:
@@ -123,7 +126,30 @@ The above commands:
 3. Starts Electron App in the develop publish folder.
 
 ## Gulp Tasks
-I will write about the gulp tasks soon.  (TBD)  For now, have a look at gulpfile.js.
+I will write more about the gulp tasks soon.  (TBD)  For now, have a look at gulpfile.js.
+
+#### Configure Workflow or Build
+There is a buildMode configuration variable in gulpfile.js.  The value of this variable controls how the app is published and compiled.
+
+After changing the mode, run the 'default' gulp task, this will clear out the build-publish folder and then re-publish and re-compile the app.
+
+The modes are:
+
+##### Dev
+- The default buildMode is dev
+- This mode does not pre-compile the app
+- When the app is running, it relies on SystemJS to transpile the ES6 at runtime
+
+##### preCompileDevelop
+- This mode pre-compiles the app into a single .js file and provides a source map.
+- When the app is running, it has no dependencies on jspm_packages or SystemJS
+
+##### preCompileDevelop
+- This mode pre-compiles and minifies the app into a single .js file.
+- When the app is running, it has no dependencies on jspm_packages or SystemJS
+
+## Running The App
+To run the app, run the 'run' gulp task.  This will launch the Electron app that has been published and compiled.
 
 ## Building
 Please read the docs on Electron Packager (link above), as it explains building on different platforms.

@@ -5,14 +5,11 @@
   "main": "src/main.js",
   "license": "MIT",
   "scripts": {
-    "start-dev":          "electron ./build-publish-develop",
-    "start-prod":         "electron ./build-publish-production",
-    "build-dev-linux":    "electron-packager ./build-publish-develop DemoAngular                     --version=0.36.9 --asar=true --platform=linux  --arch=x64  --overwrite --out ./build",
-    "build-dev-windows":  "electron-packager ./build-publish-develop DemoAngular --app-version=1.0.0 --version=0.36.9 --asar=true --platform=win32  --arch=ia32 --overwrite --out ./build",
-    "build-dev-mac":      "electron-packager ./build-publish-develop DemoAngular --app-version=1.0.0 --version=0.36.9 --asar=true --platform=darwin --arch=x64  --overwrite --out ./build",
-    "build-prod-linux":   "electron-packager ./build-publish-production DemoAngular                     --version=0.36.9 --asar=true --platform=linux  --arch=x64  --overwrite --out ./build",
-    "build-prod-windows": "electron-packager ./build-publish-production DemoAngular --app-version=1.0.0 --version=0.36.9 --asar=true --platform=win32  --arch=ia32 --overwrite --out ./build",
-    "build-prod-mac":     "electron-packager ./build-publish-production DemoAngular --app-version=1.0.0 --version=0.36.9 --asar=true --platform=darwin --arch=x64  --overwrite --out ./build"
+    "postinstall": "jspm install",
+    "start": "electron ./build-publish",
+    "build-linux": "electron-packager ./build-publish DemoAngular                     --version=0.36.9 --asar=true --platform=linux  --arch=x64  --overwrite --out ./build",
+    "build-windows": "electron-packager ./build-publish DemoAngular --app-version=1.0.0 --version=0.36.9 --asar=true --platform=win32  --arch=ia32 --overwrite --out ./build",
+    "build-mac": "electron-packager ./build-publish DemoAngular --app-version=1.0.0 --version=0.36.9 --asar=true --platform=darwin --arch=x64  --overwrite --out ./build"
   },
   "repository": {
     "type": "git",
@@ -32,7 +29,8 @@
     "ES2015",
     "angularjs",
     "sass",
-    "scss"
+    "scss",
+    "cross-platform"
   ],
   "eslintConfig": {
     "extends": [
@@ -61,6 +59,7 @@
     "gulp-compass": "^2.1.0",
     "gulp-eslint": "^2.0.0",
     "gulp-jspm": "^0.5.7",
+    "gulp-replace": "^0.5.4",
     "gulp-shell": "^0.5.2",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-watch": "^4.3.5",
