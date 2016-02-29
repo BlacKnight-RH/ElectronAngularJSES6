@@ -7,7 +7,7 @@ In case you don't know me, I have a **passion** for **Electron** and cross-platf
 
 I've shipped production manufacturing application using Electron to a customer and am currently working on another very complex Electron app.
 
-The first time I saw Electron, I was amazed that I (anyone) can write high-octane, performant, LOB apps that run on OS X, Windows, and Linux; using HTML5, CSS3, ES6, or TypeScript.
+The first time I saw Electron, I was amazed that I (anyone) can write high-octane, performant, LOB apps that run on OS X, Windows, and Linux; using HTML5, CSS3, and ES6 or TypeScript.
 
 Going forward, I want to use ES6 for my Electron App Development and Node.js Server App Development.  This demo/starter project is the result of my research in figuring out how to use ES6 in my AngularJS 1.x apps that are hosted in Electron.
 
