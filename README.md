@@ -114,7 +114,7 @@ Your results may be different than mine.  These version numbers were taken on 2 
 ```shell
 npm install
 gulp
-gulp run-dev
+gulp run
 ```
 
 The above commands:
