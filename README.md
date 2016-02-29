@@ -135,7 +135,7 @@ After changing the mode, run the 'default' gulp task, this will clear out the bu
 
 The modes are:
 
-##### Dev
+##### dev
 - The default buildMode is dev
 - This mode does not pre-compile the app
 - When the app is running, it relies on SystemJS to transpile the ES6 at runtime
