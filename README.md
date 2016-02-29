@@ -13,7 +13,7 @@ Going forward, I want to use ES6 for my Electron App Development and Node.js Ser
 
 Originally, I went down the TypeScript route but kept running into issues around incomplete, unavailable, or outdated d.ts files.  Additionally I found a 15% development tax (overhead) when writing TypeScript apps when compared to ES5 or ES6 without much payback over ES6.
 
-#### Goals
+#### Development Goals
 1.  Write ES6 JavaScript
 2.  ES6 checked by linter
 3.  Author styles using SASS/SCSS
