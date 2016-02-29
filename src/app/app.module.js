@@ -21,9 +21,3 @@ function config($stateProvider, $urlRouterProvider) {
             controller: 'HomeController as vm'
         });
 }
-
-angular.element(document).ready(() => {
-    let spinner = document.getElementById('splash');
-    spinner.style.cssText = 'display: none';
-    angular.bootstrap(document, ['app']);
-});
