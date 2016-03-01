@@ -44,6 +44,10 @@ I wrote this demo/starter to prove out all my scenarios for developing and build
 
 - Learn about ESLint rules: http://eslint.org/docs/rules/
 
+- Learn about HTMLHint: https://github.com/bezoerb/gulp-htmlhint
+
+- Learn about HTMLHint rules: https://github.com/yaniswang/HTMLHint/wiki/Rules
+
 - Learn about SASS/SCSS: http://sass-lang.com/guide
 
 - Learn about Compass: http://compass-style.org/

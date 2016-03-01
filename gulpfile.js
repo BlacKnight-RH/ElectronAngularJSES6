@@ -7,6 +7,7 @@ var compass = require('gulp-compass');
 var gulp_jspm = require('gulp-jspm');
 var sourcemaps = require('gulp-sourcemaps');
 var replace = require('gulp-replace');
+var htmlhint = require("gulp-htmlhint");
 var del = require('del');
 var runSequence = require('run-sequence');
 var fs = require("fs");
@@ -14,6 +15,7 @@ var fs = require("fs");
 var config = {
     appSource: 'src/app/**/*.js',
     allSource: 'src/**/*',
+    allAppHtml: 'src/app/**/*.html',
     buildPath: 'build',
     publishPath: 'build-publish',
     publishSrcPath: 'build-publish/src/',
@@ -40,6 +42,12 @@ const preCompileProduction = 'preCompileProduction';
 
 config.buildMode = dev;  // options are:  dev, preCompileDevelop, preCompileProduction
 
+gulp.task('app-html-hint', function () {
+    return gulp.src(config.allAppHtml)
+        .pipe(htmlhint('.htmlhintrc'))
+        .pipe(htmlhint.reporter())
+        .pipe(htmlhint.failReporter());
+});
 
 gulp.task('app-lint', function () {
     return gulp.src([config.appSource])
@@ -49,7 +57,7 @@ gulp.task('app-lint', function () {
 });
 
 gulp.task('app-lint-publish', function (done) {
-    runSequence('app-lint', 'app-publish', 'app-build', 'app-inject-insert-text', done);
+    runSequence('app-lint', 'app-html-hint', 'app-publish', 'app-pre-compile', 'app-inject-insert-text', done);
 });
 
 gulp.task('app-compass', function (done) {
@@ -127,7 +135,7 @@ gulp.task('watch', function () {
 });
 
 gulp.task('default', function () {
-    runSequence('app-clean', 'app-lint', 'app-compass', 'app-publish', 'app-pre-compile', 'app-inject-insert-text');
+    runSequence('app-clean', 'app-lint', 'app-html-hint', 'app-compass', 'app-publish', 'app-pre-compile', 'app-inject-insert-text');
 });
 
 gulp.task('build-mac', shell.task(['npm run build-mac']));
