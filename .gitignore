@@ -3,10 +3,10 @@
 
 # JetBrains
 .idea
+.DS_Store
 
 .sass-cache
 node_modules
 src/jspm_packages
 src/css/app.css
 build*
-

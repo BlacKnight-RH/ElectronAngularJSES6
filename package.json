@@ -1,5 +1,5 @@
 {
-  "name": "demoelectronangularjses6",
+  "name": "electronangularjses6",
   "version": "1.0.0",
   "description": "Example starter app for Electron, AngularJS 1.x, ES6, SASS",
   "main": "src/main.js",
@@ -7,22 +7,22 @@
   "scripts": {
     "postinstall": "jspm install",
     "start": "electron ./build-publish",
-    "build-linux": "electron-packager ./build-publish DemoAngular                     --version=0.36.9 --asar=true --platform=linux  --arch=x64  --overwrite --out ./build",
-    "build-windows": "electron-packager ./build-publish DemoAngular --app-version=1.0.0 --version=0.36.9 --asar=true --platform=win32  --arch=ia32 --overwrite --out ./build",
-    "build-mac": "electron-packager ./build-publish DemoAngular --app-version=1.0.0 --version=0.36.9 --asar=true --platform=darwin --arch=x64  --overwrite --out ./build"
+    "build-linux": "electron-packager ./build-publish ElectronAngular                       --version=1.2.5 --asar=true --platform=linux  --arch=x64  --overwrite --out ./build",
+    "build-windows": "electron-packager ./build-publish ElectronAngular --app-version=1.0.0 --version=1.2.5 --asar=true --platform=win32  --arch=ia32 --overwrite --out ./build",
+    "build-mac": "electron-packager ./build-publish ElectronAngular     --app-version=1.0.0 --version=1.2.5 --asar=true --platform=darwin --arch=x64  --overwrite --out ./build"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Oceanware/demoelectronangularjses6.git"
+    "url": "https://github.com/Oceanware/electronangularjses6.git"
   },
   "author": {
     "name": "Karl Shifflett",
-    "url": "http://karlshifflett.wordpress.com"
+    "url": "http://oceanware.wordpress.com"
   },
   "bugs": {
-    "url": "https://github.com/oceanware/demoelectronangularjses6"
+    "url": "https://github.com/oceanware/electronangularjses6"
   },
-  "homepage": "https://github.com/oceanware/demoelectronangularjses6",
+  "homepage": "https://github.com/oceanware/electronangularjses6",
   "keywords": [
     "electron",
     "ES6",
@@ -52,8 +52,8 @@
   },
   "devDependencies": {
     "del": "^2.2.0",
-    "electron-packager": "^5.2.1",
-    "electron-prebuilt": "^0.36.9",
+    "electron-packager": "^7.0.1",
+    "electron-prebuilt": "^1.2.5",
     "gulp": "^3.9.1",
     "gulp-changed": "^1.3.0",
     "gulp-compass": "^2.1.0",
@@ -64,7 +64,7 @@
     "gulp-shell": "^0.5.2",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-watch": "^4.3.5",
-    "jspm": "^0.16.30",
+    "jspm": "^0.16.39",
     "run-sequence": "^1.1.5"
   },
   "jspm": {

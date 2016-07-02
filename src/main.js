@@ -1,10 +1,11 @@
+
+const electron = require('electron');
+const {app, BrowserWindow} = electron;
+
 (function () {
     'use strict';
 
-    var app = require('app');
-    var BrowserWindow = require('browser-window');
-
-    var mainWindow = null;
+    let mainWindow = null;
 
     app.on('window-all-closed', function () {
         app.quit();
@@ -16,15 +17,12 @@
         mainWindow = new BrowserWindow({
             width: 900,
             height: 700,
-            "min-width": 900,
-            "min-height": 700,
             center: true,
             resizable: true,
             show: false
         });
 
-        mainWindow.loadURL('file:// ' + __dirname + '/index.html');
-
-        mainWindow.show();
+         mainWindow.loadURL(`file://${__dirname}/index.html`);
+         mainWindow.show();
     });
 })();

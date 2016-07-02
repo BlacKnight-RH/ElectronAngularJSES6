@@ -26,6 +26,7 @@ var config = {
     cssPath: 'src/css',
     scssFiles: 'src/scss/*.scss',
     rootModule: 'src/app/app.module.js',
+    rootApp: 'src/app/app.js',
     indexFile: 'src/index.html',
     devInsertTextFile: 'index-dev.txt',
     preCompileInsertTextFile: 'index-pre-compile.txt',
@@ -114,13 +115,13 @@ gulp.task('app-inject-insert-text', function () {
 
 gulp.task('app-pre-compile', function () {
     if (config.buildMode === preCompileDevelop) {
-        return gulp.src(config.rootModule)
+        return gulp.src(config.rootApp)
             .pipe(sourcemaps.init())
             .pipe(gulp_jspm({selfExecutingBundle: true}))
             .pipe(sourcemaps.write('.'))
             .pipe(gulp.dest(config.publishAppPath));
     } else if (config.buildMode === preCompileProduction) {
-        return gulp.src(config.rootModule)
+        return gulp.src(config.rootApp)
             .pipe(gulp_jspm({selfExecutingBundle: true, minify: true}))
             .pipe(gulp.dest(config.publishAppPath));
     } else {

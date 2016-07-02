@@ -1,5 +1,7 @@
 # Electron AngularJS 1.x ES6 SASS/SCSS Starter
 
+Updated for Electron 1.2.5.
+
 Demo/starter app showing Electron, AngularJS 1.4.8, ES6, and SASS/SCSS.
 
 ## Introduction
