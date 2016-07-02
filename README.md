@@ -2,7 +2,7 @@
 
 Updated for Electron 1.2.5.
 
-Demo/starter app showing Electron, AngularJS 1.4.8, ES6, and SASS/SCSS.
+Demo app showing how to use JSPM to pre-compile your Electron, AngularJS 1.4.8, ES6, and SASS/SCSS.  Updated for Electron 1.2.5.
 
 ## Introduction
 In case you don't know me, I have a **passion** for **Electron** and cross-platform line business applications.
