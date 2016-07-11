@@ -65,7 +65,7 @@ I wrote this demo/starter to prove out all my scenarios for developing and build
 ## Prerequisites
 Before you can run this code locally on your system, you'll need to load the following software:
 
-- Install node.js:  https://nodejs.org/en/
+- Install node.js:  https://nodejs.org/en/  (**Mac users install using "brew"** not the download from node web site.)
 
 - Install Ruby:  https://www.ruby-lang.org/en/documentation/installation/
 
