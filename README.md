@@ -132,7 +132,7 @@ The above commands:
 3. "gulp run" - Starts the Electron App that has been publised to the build-publish folder.
 
 ## Gulp Tasks
-I will write more about the gulp tasks soon.  (TBD)  For now, have a look at gulpfile.js.
+Have a look at gulpfile.js to see the tasks.
 
 #### Configure Workflow or Build
 There is a buildMode configuration variable in gulpfile.js.  The value of this variable controls how the app is published and compiled.
@@ -161,6 +161,3 @@ To run the app, run the 'run' gulp task.  This will launch the Electron app that
 Please read the docs on Electron Packager (link above), as it explains building on different platforms.
 
 Building is the act of creating a compile app for the selected platform.
-
-## Tests
-I will write about testing soon. (TBD)
