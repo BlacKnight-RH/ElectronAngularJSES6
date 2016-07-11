@@ -25,7 +25,6 @@ Originally, I went down the TypeScript route but kept running into issues around
 7.  Great client debugging experience during development
 8.  Author clean ES6 with very little or no framework goo code
 9.  Be productive while coding
-10. Testing (coming soon)
 
 This demo/starter meets my goals.
 
