@@ -1,8 +1,8 @@
-# Electron AngularJS 1.x ES6 SASS/SCSS Starter
+# Starter Kit - Electron AngularJS 1.x ES6 SASS/SCSS
 
 Updated for Electron 1.2.5.
 
-Demo app showing how to use JSPM to pre-compile your Electron, AngularJS 1.4.8, ES6, and SASS/SCSS.  Updated for Electron 1.2.5.
+Starter Kit showing how to use JSPM to pre-compile your Electron, AngularJS 1.4.8, ES6, and SASS/SCSS.  Updated for Electron 1.2.5.
 
 ## Introduction
 In case you don't know me, I have a **passion** for **Electron** and cross-platform line business applications.
