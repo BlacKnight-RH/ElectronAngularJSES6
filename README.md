@@ -125,11 +125,11 @@ gulp run
 
 The above commands:
 
-1. Install all app dependencies (node_modules and jspm_packages).
+1. "npm install" - Installs all app dependencies (node_modules and jspm_packages).
 
-2. Runs the default gulp script that cleans all develop build folders, lints all ES6 code, runs compass, copies all development files except source JavaScript files, and creates a bundle file of all JavaScript.
+2. "gulp" - Runs the default gulp script that cleans all develop build folders, lints all ES6 code, runs compass, copies all development files except source JavaScript files, and creates a bundle file of all JavaScript.
 
-3. Starts Electron App in the develop publish folder.
+3. "gulp run" - Starts the Electron App that has been publised to the build-publish folder.
 
 ## Gulp Tasks
 I will write more about the gulp tasks soon.  (TBD)  For now, have a look at gulpfile.js.
