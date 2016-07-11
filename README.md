@@ -99,17 +99,17 @@ npm install -g jspm
 #### Verify Node Packages
 You can check your globally installed node packages by running the below command ( npm ls -g --depth=0 ).
 
-Your results may be different than mine.  These version numbers were taken on 2 Feb 2016.
+Your results may be different than mine.  These version numbers were taken on 7 July 2016.
 
 ```shell
  $ npm ls -g --depth=0
 /usr/local/lib
-├── electron-packager@5.2.1
-├── electron-prebuilt@0.36.9
+├── electron-packager@7.1.0
+├── electron-prebuilt@1.2.5
 ├── gulp@3.9.1
 ├── gulp-cli@1.2.1
-├── jspm@0.16.30
-├── npm@2.14.7
+├── jspm@0.16.39
+├── npm@3.9.5
 ```
 
 ## Run The App!
